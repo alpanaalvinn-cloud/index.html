@@ -1,55 +1,34 @@
-*{
-box-sizing:border-box;
-font-family:Arial;
-}
-
-
 body{
-
 margin:0;
 background:#070d20;
+font-family:Arial;
 color:white;
-
 }
-
 
 
 .container{
-
 max-width:900px;
 margin:auto;
-padding:40px 20px;
-
+padding:25px;
 }
-
 
 
 .header{
-
 background:#121b35;
-padding:30px;
 border-radius:25px;
+padding:25px;
 text-align:center;
-
 }
-
 
 
 .header h1{
-
 font-size:35px;
-
 }
-
 
 
 #userEmail{
-
 color:#00e5ff;
-font-size:18px;
-
 }
-
 
 
 
@@ -58,7 +37,8 @@ font-size:18px;
 display:grid;
 grid-template-columns:repeat(2,1fr);
 gap:20px;
-margin-top:30px;
+
+margin-top:25px;
 
 }
 
@@ -67,24 +47,29 @@ margin-top:30px;
 .card{
 
 background:#121b35;
-padding:25px;
+
+height:150px;
+
 border-radius:25px;
-text-align:center;
+
+display:flex;
+flex-direction:column;
+
+justify-content:center;
+align-items:center;
 
 transition:.3s;
-cursor:pointer;
 
 }
-
 
 
 .card:hover{
 
-transform:translateY(-8px);
-background:#18254a;
+transform:scale(1.05);
+
+background:#1d2b55;
 
 }
-
 
 
 .icon{
@@ -94,41 +79,37 @@ font-size:45px;
 }
 
 
-
 .card h3{
 
-margin:10px 0;
+margin:8px;
 
 }
 
+
+
+.card p{
+
+color:#aaa;
+
+}
 
 
 
 button{
 
-margin-top:30px;
+margin-top:25px;
 
 width:100%;
+
 padding:18px;
 
-border:none;
+border:0;
+
 border-radius:30px;
 
-background:#00d9ff;
+background:#00ddff;
 
 font-size:20px;
-
-cursor:pointer;
-
-transition:.3s;
-
-}
-
-
-
-button:hover{
-
-transform:scale(1.05);
 
 }
 
@@ -138,7 +119,7 @@ transform:scale(1.05);
 
 .menu{
 
-grid-template-columns:1fr;
+grid-template-columns:1fr 1fr;
 
 }
 
