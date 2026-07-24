@@ -1,22 +1,35 @@
 import { auth } from "./firebase.js";
 
+
 import {
+
 onAuthStateChanged,
 signOut
+
 } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
 
 
-// Cek user login
 
-const userEmail = document.getElementById("userEmail");
+const emailText =
+document.getElementById("userEmail");
 
 
-onAuthStateChanged(auth, (user)=>{
+const logoutBtn =
+document.getElementById("logoutBtn");
+
+
+
+
+// cek login
+
+onAuthStateChanged(auth,(user)=>{
+
 
 if(user){
 
-userEmail.innerHTML =
-"Login sebagai:<br>" + user.email;
+emailText.innerHTML =
+"👤 "+user.email;
+
 
 }else{
 
@@ -24,13 +37,13 @@ window.location.href="login.html";
 
 }
 
+
 });
 
 
-// Tombol logout
 
-const logoutBtn =
-document.getElementById("logoutBtn");
+
+// logout
 
 
 logoutBtn.addEventListener("click",()=>{
@@ -40,7 +53,7 @@ signOut(auth)
 
 .then(()=>{
 
-alert("Berhasil logout");
+alert("Logout berhasil");
 
 window.location.href="login.html";
 
