@@ -1,56 +1,43 @@
-/* RESET */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-/* BODY */
+/* Mengatur seluruh halaman */
 body {
-    background: linear-gradient(135deg, #667eea, #764ba2);
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #333;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  min-height: 100vh;
 }
 
-/* KONTEN UTAMA */
-body > * {
-    width: 90%;
+/* Bagian utama */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* JUDUL */
+/* Gambar produk */
+img {
+  width: 350px;
+  max-width: 90%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  margin: 20px;
+}
+
+/* Judul */
 h1 {
-    text-align: center;
-    color: white;
-    font-size: 40px;
-    margin-bottom: 20px;
+  color: white;
+  font-size: 40px;
+  text-align: center;
+  margin: 20px;
 }
 
-/* PARAGRAF */
+/* Deskripsi */
 p {
-    text-align: center;
-    background: white;
-    padding: 20px;
-    border-radius: 15px;
-    font-size: 18px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-}
-
-/* ANIMASI */
-h1, p {
-    animation: muncul 1s ease;
-}
-
-@keyframes muncul {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  background: white;
+  padding: 15px 25px;
+  border-radius: 15px;
+  font-size: 18px;
+  text-align: center;
+  max-width: 350px;
 }
