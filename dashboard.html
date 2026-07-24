@@ -1,32 +1,24 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Dashboard Alvin Cloud</title>
+<title>Alvin Cloud</title>
 
 <link rel="stylesheet" href="dashboard.css">
 
 </head>
-
 
 <body>
 
 
 <div class="container">
 
-
 <div class="header">
-
 <h1>☁️ Alvin Cloud</h1>
-
-<p id="userEmail">
-Memuat akun...
-</p>
-
+<p id="userEmail">Memuat...</p>
 </div>
 
 
@@ -48,24 +40,24 @@ Memuat akun...
 </div>
 
 
-<div class="card">
+<div class="card" onclick="uploadFile()">
 <div class="icon">📂</div>
 <h3>File</h3>
-<p>Kelola file</p>
+<p>Upload File</p>
 </div>
 
 
-<div class="card">
+<div class="card" onclick="uploadVideo()">
 <div class="icon">🎬</div>
 <h3>Video</h3>
-<p>Koleksi video</p>
+<p>Upload Video</p>
 </div>
 
 
-<div class="card">
+<div class="card" onclick="uploadPhoto()">
 <div class="icon">🖼️</div>
 <h3>Galeri</h3>
-<p>Foto Anda</p>
+<p>Upload Foto</p>
 </div>
 
 
@@ -80,6 +72,9 @@ Memuat akun...
 
 
 
+<input hidden id="fileInput" type="file">
+
+
 <button id="logoutBtn">
 🚪 Logout
 </button>
@@ -92,5 +87,4 @@ Memuat akun...
 <script type="module" src="dashboard.js"></script>
 
 </body>
-
 </html>
