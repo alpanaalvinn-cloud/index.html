@@ -27,3 +27,29 @@ window.location.href="login.html";
 }
 
 }
+
+function login(){
+
+let email = document.querySelector('input[type="email"]').value;
+let password = document.querySelector('input[type="password"]').value;
+
+
+let savedEmail = localStorage.getItem("email");
+let savedPassword = localStorage.getItem("password");
+
+
+if(email == savedEmail && password == savedPassword){
+
+alert("Login berhasil!");
+
+window.location.href="index.html";
+
+}
+
+else{
+
+alert("Email atau password salah!");
+
+}
+
+}
