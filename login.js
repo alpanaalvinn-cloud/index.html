@@ -24,7 +24,7 @@ signInWithEmailAndPassword(auth,email,password)
 
 .then(() => {
     alert("Login berhasil!");
-    window.location.href="index.html";
+    window.location.href = "dashboard.html";
 })
 
 .catch((error)=>{
