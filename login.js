@@ -11,11 +11,16 @@ const loginBtn = document.getElementById("loginBtn");
 loginBtn.addEventListener("click", () => {
 
 
-const email = document.getElementById("email").value;
+const email = document.getElementById("email").value.trim();
+const password = document.getElementById("password").value.trim();
 
-const password = document.getElementById("password").value;
+console.log("Email:", email);
+console.log("Password:", password);
 
-
+if(!email || !password){
+    alert("Email dan password wajib diisi");
+    return;
+}
 
 signInWithEmailAndPassword(auth,email,password)
 
