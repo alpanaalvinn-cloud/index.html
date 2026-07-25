@@ -279,37 +279,39 @@ lebih baik setiap hari.
 <script>
 
 
-const quotes=[
+let quotes=[];
 
-"Hidup bukan tentang menunggu badai berlalu, tetapi belajar menari di tengah hujan.",
 
-"Jangan takut gagal, karena setiap kegagalan membawa pelajaran baru.",
+fetch("quotes.json")
+.then(response=>response.json())
+.then(data=>{
 
-"Langkah kecil yang konsisten akan membawa perubahan besar.",
+quotes=data;
 
-"Jadilah seseorang yang tetap baik meskipun dunia tidak selalu baik kepadamu.",
+ubahQuote();
 
-"Masa depan adalah hasil dari apa yang kamu lakukan hari ini.",
+});
 
-"Tidak perlu menjadi sempurna untuk menjadi berarti.",
-
-"Kesabaran hari ini adalah kekuatan untuk kemenangan esok."
-
-];
 
 
 function ubahQuote(){
 
 let random=Math.floor(Math.random()*quotes.length);
 
-document.getElementById("quote").innerHTML=
-'"'+quotes[random]+'"';
+
+document.getElementById("quote").innerHTML =
+'"'+quotes[random].text+'"';
+
+
+document.querySelector(".author").innerHTML =
+"— "+quotes[random].author;
+
 
 }
 
 
-setInterval(ubahQuote,8000);
 
+setInterval(ubahQuote,8000);
 
 </script>
 
